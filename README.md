@@ -6,3 +6,8 @@ Beginner 2D game project made with Unity Learn's [2D Beginner Game: Sprite Fligh
 **Current focus:** Setting up the Game scene and learning to navigate 2D scenes.
 
 This is a personal learning project.
+
+## Progress
+
+Completed “Set up your 2D game world” on November 11, 2026.
+Next: “Make a flying obstacle prefab”.
