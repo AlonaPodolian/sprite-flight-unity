@@ -10,4 +10,5 @@ This is a personal learning project.
 ## Progress
 
 Completed “Set up your 2D game world” on November 11, 2026.
-Next: “Make a flying obstacle prefab”.
+Completed “Make a flying obstacle prefab” on November 15, 2026.
+Next: “Random obstacle size, direction, and speed”.
