@@ -12,3 +12,6 @@ This is a personal learning project.
 Completed “Set up your 2D game world” on November 11, 2026.
 Completed “Make a flying obstacle prefab” on November 15, 2026.
 Next: “Random obstacle size, direction, and speed”.
+
+Completed “Random obstacle size, direction, and speed” on November 16, 2026.
+Next: “Steer the player”.
