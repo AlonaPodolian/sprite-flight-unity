@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2767346761004041033}
   - component: {fileID: 2671832977144336022}
   - component: {fileID: 6275808092208944276}
+  - component: {fileID: 8890000568421420420}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -110,7 +111,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 2c0ddfd378bd782428b2d173b122b004, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -221,3 +222,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 0.8828125}
   m_EdgeRadius: 0
+--- !u!114 &8890000568421420420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5678978813772895318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79f666a0eb24f949aa49c60ddf19aa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  minSize: 0.5
+  maxSize: 2
+  minSpeed: 100
+  maxSpeed: 200
+  maxSpinSpeed: 10
