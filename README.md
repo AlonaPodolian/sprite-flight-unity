@@ -2,8 +2,8 @@
 
 Beginner 2D game project made with Unity Learn's [2D Beginner Game: Sprite Flight](https://learn.unity.com/course/2d-beginner-game-sprite-flight).
 
-**Status:** In progress  
-**Current focus:** Setting up the Game scene and learning to navigate 2D scenes.
+**Status:** In progress
+**Current focus:** Building a scoring system and continuing the Sprite Flight tutorial.
 
 This is a personal learning project.
 
@@ -11,7 +11,6 @@ This is a personal learning project.
 
 Completed “Set up your 2D game world” on November 11, 2026.
 Completed “Make a flying obstacle prefab” on November 15, 2026.
-Next: “Random obstacle size, direction, and speed”.
-
 Completed “Random obstacle size, direction, and speed” on November 16, 2026.
-Next: “Steer the player”.
+Completed “Steer the player” on November 17, 2026.
+Next: Build a scoring system.
