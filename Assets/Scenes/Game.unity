@@ -197,6 +197,7 @@ MonoBehaviour:
   scoreMultiplier: 10
   thrustForce: 1
   uiDocument: {fileID: 599584514}
+  explosionEffect: {fileID: 3122878130062395509, guid: e7dbfd370eb80784385e6f79effab016, type: 3}
 --- !u!4 &488005727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4379040186553709385, guid: 41b13e572631ec344a85776a294b2415, type: 3}

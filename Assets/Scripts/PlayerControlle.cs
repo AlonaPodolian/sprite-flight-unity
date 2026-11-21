@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class PlayerControlle : MonoBehaviour
@@ -13,12 +14,20 @@ public class PlayerControlle : MonoBehaviour
     Rigidbody2D rb;
     public UIDocument uiDocument;
     private Label scoreText;
+    private Label highScoreText;
+    private Button restartButton;
+    public GameObject explosionEffect;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         scoreText = uiDocument.rootVisualElement.Q<Label>("ScoreLabel");
+        highScoreText = uiDocument.rootVisualElement.Q<Label>("HighScoreLabel");
+        highScoreText.style.display = DisplayStyle.None;
+        restartButton = uiDocument.rootVisualElement.Q<Button>("RestartButton");
+        restartButton.style.display = DisplayStyle.None;
+        restartButton.clicked += ReloadScene;
     }
 
     // Update is called once per frame
@@ -50,10 +59,30 @@ public class PlayerControlle : MonoBehaviour
             rb.AddForce(direction * thrustForce);
         }
     }
-    
+
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        int highScore = PlayerPrefs.GetInt("HighScore", 0);
+        int currentScore = Mathf.FloorToInt(score);
+
+        if (currentScore > highScore)
+        {
+            highScore = currentScore;
+            PlayerPrefs.SetInt("HighScore", highScore);
+            PlayerPrefs.Save();
+        }
+
+        highScoreText.text = "High Score: " + highScore;
+        highScoreText.style.display = DisplayStyle.Flex;
+
         Destroy(gameObject);
+        Instantiate(explosionEffect, transform.position, transform.rotation);
+        restartButton.style.display = DisplayStyle.Flex;
+    }
+
+    void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
