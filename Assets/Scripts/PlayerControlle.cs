@@ -17,6 +17,7 @@ public class PlayerControlle : MonoBehaviour
     private Label highScoreText;
     private Button restartButton;
     public GameObject explosionEffect;
+    public GameObject boosterFlame;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,6 +29,7 @@ public class PlayerControlle : MonoBehaviour
         restartButton = uiDocument.rootVisualElement.Q<Button>("RestartButton");
         restartButton.style.display = DisplayStyle.None;
         restartButton.clicked += ReloadScene;
+        boosterFlame.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,6 +50,7 @@ public class PlayerControlle : MonoBehaviour
 
         void MovePlayer()
     {
+        boosterFlame.SetActive(Mouse.current.leftButton.isPressed);
         if (Mouse.current.leftButton.isPressed)
         {
             // Calculate mouse direction
