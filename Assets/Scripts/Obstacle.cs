@@ -1,3 +1,4 @@
+using NUnit.Framework.Internal;
 using UnityEngine;
 
 
@@ -21,13 +22,19 @@ public class Obstacle : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
 
+        float difficultyMultiplier = 1f + Time.timeSinceLevelLoad * 0.005f;
+
         float randomSpeed = Random.Range(minSpeed, maxSpeed) / randomSize;
+        randomSpeed *= difficultyMultiplier;
+
         Vector2 randomDirection = Random.insideUnitCircle;
         rb.AddForce(randomDirection * randomSpeed);
 
-        if (rb.linearVelocity.magnitude > maxSpeed)
+        float currentMaxSpeed = maxSpeed * difficultyMultiplier;
+
+        if (rb.linearVelocity.magnitude > currentMaxSpeed)
         {
-            rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
+            rb.linearVelocity = rb.linearVelocity.normalized * currentMaxSpeed;
         }
 
         float randomTorque = Random.Range(-maxSpinSpeed, maxSpinSpeed);
@@ -35,9 +42,11 @@ public class Obstacle : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (rb == null) return;
+
+        rb.linearVelocity *= 1f + Time.fixedDeltaTime * 0.03f;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
