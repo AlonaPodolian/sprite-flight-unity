@@ -1,9 +1,9 @@
 # Sprite Flight — Unity Learning Project
 
-Beginner 2D game project made with Unity Learn's [2D Beginner Game: Sprite Flight](https://learn.unity.com/course/2d-beginner-game-sprite-flight).
+A beginner 2D game made while following Unity Learn's [2D Beginner Game: Sprite Flight](https://learn.unity.com/course/2d-beginner-game-sprite-flight).
 
 **Status:** In progress  
-**Current focus:** Preparing the game for mobile devices and a browser build.
+**Current focus:** Building and publishing the game.
 
 This is a personal learning project.
 
@@ -17,30 +17,32 @@ This is a personal learning project.
 - Completed “Restart the game with a bang” on November 21, 2026.
 - Styled the score labels and Restart button, updated the game colors, and added background music on November 24, 2026.
 - Added thruster and explosion sound effects, animated the booster flame, and made obstacles gradually speed up on November 26, 2026.
+- Completed “Make your game compatible with mobile” and tested the controls in Unity Device Simulator on November 27, 2026.
 
 ## Features
 
-- Mouse-controlled player movement.
+- Mouse and touch controls using Unity Input System pointer actions.
 - Obstacles with random sizes, directions, and speeds.
 - Obstacles gradually speed up during gameplay.
-- Time-based scoring and a saved high score.
+- Time-based scoring and a high score saved between games.
 - Player explosion effect and a Restart button.
 - Particle effects when obstacles collide.
 - Animated booster flame and looping thruster sound while thrusting.
 - Explosion sound on collision.
 - Looping background music.
-- Styled score labels and Restart button.
+- Compact mobile interface with the score and high score at the top and Restart centered.
 
 ## Controls
 
-Hold the left mouse button to turn toward the cursor and apply thrust.  
-Avoid obstacles and the arena borders.  
-Select Restart after a collision to play again.
+- **Desktop:** Hold the left mouse button and move the cursor to steer and thrust toward it.
+- **Mobile:** Touch and drag on the screen to steer and thrust toward your finger.
+- Avoid obstacles and the arena borders.
+- Select **Restart** after a collision to play again.
 
 ## Next steps
 
-- Adapt the controls and interface for mobile devices.
 - Build and test a browser version of the game.
+- Publish the game.
 
 ## Credits
 
