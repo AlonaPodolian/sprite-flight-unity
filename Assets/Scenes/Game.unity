@@ -329,6 +329,42 @@ MonoBehaviour:
   uiDocument: {fileID: 599584514}
   explosionEffect: {fileID: 3122878130062395509, guid: e7dbfd370eb80784385e6f79effab016, type: 3}
   boosterFlame: {fileID: 1614919549}
+  moveForward:
+    m_Name: Move Forward
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 83391be7-14c7-4999-9f65-a6d51ac6faa9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: f48e4826-2a60-4ead-baee-3339eb1f1e1c
+      m_Path: <Pointer>/press
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move Forward
+      m_Flags: 0
+    m_Flags: 0
+    m_Priority: 0
+  lookPosition:
+    m_Name: Look Position
+    m_Type: 0
+    m_ExpectedControlType: Vector2
+    m_Id: d45ed936-750f-44dd-be1b-4283ce26bfda
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: eb005d2c-47eb-405e-bf56-616470fd7375
+      m_Path: <Pointer>/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Look Position
+      m_Flags: 0
+    m_Flags: 0
+    m_Priority: 0
 --- !u!4 &488005727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4379040186553709385, guid: 41b13e572631ec344a85776a294b2415, type: 3}

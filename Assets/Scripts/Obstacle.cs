@@ -44,9 +44,9 @@ public class Obstacle : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (rb == null) return;
+        if (rb == null || rb.bodyType == RigidbodyType2D.Static) return;
 
-        rb.linearVelocity *= 1f + Time.fixedDeltaTime * 0.03f;
+        rb.linearVelocity *= 1f + Time.fixedDeltaTime * 0.05f;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
